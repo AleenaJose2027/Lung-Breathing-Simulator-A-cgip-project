@@ -1,0 +1,1 @@
+pygame (library used to create games and graphical applications by handling graphics, animations, and user input)
