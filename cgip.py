@@ -24,9 +24,8 @@ WHITE = (255, 255, 255)
 time_value = 0
 
 
-# ---------------------------------------------------------
 # DDA LINE DRAWING ALGORITHM
-# ---------------------------------------------------------
+
 def draw_line_dda(surface, color, x1, y1, x2, y2, thickness=1):
 
     dx = x2 - x1
@@ -49,9 +48,8 @@ def draw_line_dda(surface, color, x1, y1, x2, y2, thickness=1):
         y += y_inc
 
 
-# ---------------------------------------------------------
 # MIDPOINT CIRCLE ALGORITHM (TRACHEA RINGS)
-# ---------------------------------------------------------
+
 def draw_ring(surface, color, center, radius, thickness=1):
 
     cx, cy = center
@@ -96,9 +94,8 @@ def draw_ring(surface, color, center, radius, thickness=1):
         plot_points(x, y)
 
 
-# ---------------------------------------------------------
 # LUNG SHAPE
-# ---------------------------------------------------------
+
 def get_refined_lungs(scale):
 
     cx, cy = WIDTH // 2, HEIGHT // 2 - 30
@@ -125,9 +122,8 @@ def get_refined_lungs(scale):
     return left_pts, right_pts
 
 
-# ---------------------------------------------------------
 # RESPIRATORY TREE
-# ---------------------------------------------------------
+
 def draw_respiratory_tree(scale):
 
     cx = WIDTH // 2
@@ -197,9 +193,8 @@ def draw_respiratory_tree(scale):
     screen.blit(branch_layer, (0, 0))
 
 
-# ---------------------------------------------------------
 # DIAPHRAGM
-# ---------------------------------------------------------
+
 def draw_diaphragm(inhale):
 
     cx = WIDTH // 2
@@ -224,9 +219,9 @@ def draw_diaphragm(inhale):
     pygame.draw.lines(screen, (160, 60, 60), False, pts, 4)
 
 
-# ---------------------------------------------------------
+
 # MAIN LOOP
-# ---------------------------------------------------------
+
 running = True
 
 while running:
